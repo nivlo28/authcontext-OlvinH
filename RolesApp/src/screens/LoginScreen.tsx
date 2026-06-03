@@ -46,7 +46,7 @@ export default function LoginScreen() {
 
       <TouchableOpacity style={styles.loginButton} onPress={() => login(role)}>
         <Text style={styles.loginText}>
-          Ingresar
+          "Ingresar"
         </Text>
       </TouchableOpacity>
 
