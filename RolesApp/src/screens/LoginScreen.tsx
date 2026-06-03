@@ -1,10 +1,12 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useState } from 'react';
 import React from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function LoginScreen() {
 
   const [role, setRole] = useState<'admin' | 'common'>('common');
+  const { login } = useAuth();
 
   return (
     <View style={styles.container}>
@@ -42,7 +44,7 @@ export default function LoginScreen() {
         Rol seleccionado: {role}
       </Text>
 
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={() => login(role)}>
         <Text style={styles.loginText}>
           Ingresar
         </Text>
