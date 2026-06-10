@@ -11,7 +11,12 @@ export default function HomeScreen() {
             <TouchableOpacity style={styles.button} onPress={logout}>
                 <Text style={styles.buttonText}>Cerrar sesión</Text>
             </TouchableOpacity>
+
+            <Text>
+                {process.env.EXPO_PUBLIC_SUPABASE_URL}
+            </Text>
         </View>
+        
     );
 }
 
